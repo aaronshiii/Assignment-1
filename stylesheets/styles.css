@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'lakeshore';
+    src: url('fonts/LAKESHOR-webfont.eot');
+    src: url('fonts/LAKESHOR-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/LAKESHOR-webfont.woff') format('woff'),
+         url('fonts/LAKESHOR-webfont.ttf') format('truetype'),
+         url('fonts/LAKESHOR-webfont.svg#lakeshore') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*do not use a element selector to change a style*/
+body
+{
+    font-size: 10px;
+    background: rgb(149, 194, 215);     /*background of the body changes colors*/
+}
+/*Because of the anchor that wraps around the texts, it's giving it a hyperlink.
+This will get rid of that however, the hyperlink "#" still exists but no purple underline*/
+a
+{
+    text-decoration:none;
+}
+/*Any href with the value of # will have the following style command changes*/
+a[href = "#"]
+{
+    text-decoration:none;
+}
+.logo-text
+{
+    background: white;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'lakeshore';
+    font-size: 37px;
+}
+/*This creates spacing inbetween every "thumbnail-item class*/
+.thumbnail-item + .thumbnail-item
+{
+    margin-top: 10px;
+}
+.thumbnail-item
+{
+    border: lpx solid rgb(100%, 100%, 100%);
+    border: lpx solid rgba(100%, 100%, 100%, 0.8);      /*This is for opacity(transparency). This line is ignored if browser doesnt support it*/
+}
+.thumbnail-list
+{
+    /*Question: Why use Bullet points in the first place if you're just going to get rid of them???
+    Answer: It's better to list what they are and the physical appearance is different. At the end of the day, they're bullets*/
+    display:block;      /*Gets rid of the whitespace*/
+    list-style: none;   /*Gets rid of the bullet points*/
+    padding: 0;         /*Makes the words go all the way to the left side*/
+}
+.thumbnail-image
+{
+    /*This deletes the gap that used to be inbetween the picture and caption*/
+    display: block;
+    width:100%;
+}
+.thumbnail-title
+{
+   /*Notice how each name for the ducks have changed, now includes a border with color
+   Numbers inside the box model = pixel count*/ 
+
+    display:block;   /*changes the box for all elements of the class so they occupy the entire width allowed by their containing element*/
+    margin: 0;      /*sets margin for thumbnail titles to 0*/
+    padding: 4px 10px;  /*1st value = top & bottom values // 2nd value = side values || if only 1 value, = applied to all 4 sides*/
+    
+    background: rgb(96, 125, 139);
+    color: rgb(202, 238, 255);
+
+    /*This shows us the more specific it is, the more precedence it has*/
+    font-size: 18px;
+}

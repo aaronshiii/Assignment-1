@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">      <!--Use this-->
+        <title>ottergram</title>
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">       <!--Linking the file styles.css inside the folder stylesheets-->
+        <link rel = "stylesheet" href = "stylesheets/styles.css">
+        <!-- rel = lets the browser know that it has styling info
+             href = tells the browser to send a request to the server for the styles.css file w/ file path-->
+    </head>
+    <body>
+        <!--All HTML code holding content ie. images, links, text, buttons, videos etc-->
+        <header>
+            <!--This is where all the code will be written-->
+            <h1 class = "logo-text">ottergram</h1>
+        </header>
+
+        <ul class = "thumbnail-list">        <!--unordered list || bulleted list -->
+            <li class = "thumbnail-item">        <!--list item-->
+                <a href = "#">      
+                    <!-- <a> tag is the anchor tag makes the image clickable commonly called "links" but not like the <linl> tag"
+                    The href indicates the resource the anchor points to usually a web address. 
+                    # is the dummy value so that it doesnt send us to another page. Instead it'll send us to the top of the page  -->
+
+                    <img class = "thumbnail-image" src = "img/otter1.jpg" alt = "Barry the Otter">
+                    <!--img is the variable type and src is the variable name replacing the img name.
+                    alt is replacement text in case the photo doesn't load. Also used by visual impaired individuals to read at loud-->
+
+                    <span class = "thumbnail-title">Barry</span> <!--span is just a generic container for content that grabs everything-->
+                    <!--The class attribute is  going to help us identify the HTML element that we need to style-->
+                </a>
+            </li>
+            <li class = "thumbnail-item">
+                <a href = "#">
+                    <img class = "thumbnail-image" src = "img/otter2.jpg" alt = "Robin the Otter">
+                    <span class = "thumbnail-title">Robin</span>
+                </a>
+            </li>
+            <li class = "thumbnail-item">
+                <a href = "#">
+                    <img class = "thumbnail-image" src = "img/otter3.jpg" alt = "Maurice the Otter">
+                    <span class = "thumbnail-title">Maurice</span>
+                </a>
+            </li>
+            <li class = "thumbnail-item">
+                <a href = "#">
+                    <img class = "thumbnail-image" src = "img/otter4.jpg" alt = "Lesley the Otter">
+                    <span class = "thumbnail-title">Lesley</span>
+                </a>
+            </li>
+            <li class = "thumbnail-item">
+                <a href = "#">
+                    <img class = "thumbnail-image" src = "img/otter5.jpg" alt = "Barbara the Otter">
+                    <span class = "thumbnail-title">Barbara</span>
+                </a>
+            </li>
+
+            <!--type in the following code in terminal:
+            browser-sync start --server --browser "Google Chrome"  --files "stylesheets/*.css, *.html" -->
+        </ul>
+    </body>
+</html>
